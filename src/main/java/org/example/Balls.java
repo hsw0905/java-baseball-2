@@ -35,4 +35,21 @@ public class Balls {
                 .findFirst()
                 .orElse(BallStatus.NOTHING);
     }
+
+    public PlayResult play(Balls other) {
+        PlayResult result = new PlayResult(0, 0);
+
+        for (int i = 0; i < SIZE; i++) {
+            if (this.play(other.getBallAt(i)) == BallStatus.STRIKE) {
+                result.plusStrike();
+            } else if (this.play(other.getBallAt(i)) == BallStatus.BALL) {
+                result.plusBall();
+            }
+        }
+        return result;
+    }
+
+    private Ball getBallAt(int index) {
+        return list.get(index);
+    }
 }
