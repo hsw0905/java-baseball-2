@@ -24,7 +24,6 @@ public class Game {
                 )
         );
 
-
         while(result.getStrike() != MAX_STRIKE_COUNT) {
             System.out.println("숫자를 입력해주세요 : ");
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -49,6 +48,16 @@ public class Game {
                 break;
             }
 
+        }
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        try {
+            String quitOrContinue = br.readLine();
+            if (quitOrContinue.equals("1")) {
+                result.reset();
+                run();
+            }
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
         }
 
     }
