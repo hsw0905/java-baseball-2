@@ -35,4 +35,9 @@ public class PlayResult {
     public void plusBall() {
         ball++;
     }
+
+    public void reset() {
+        strike = 0;
+        ball = 0;
+    }
 }
