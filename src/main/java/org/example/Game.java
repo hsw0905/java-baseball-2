@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Game {
-    public static final int MAX_STRIKE_COUNT = 3;
+    private static final int MAX_STRIKE_COUNT = 3;
     private PlayResult result;
 
     public Game(PlayResult result) {

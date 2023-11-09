@@ -5,8 +5,8 @@ import java.util.List;
 import java.util.Set;
 
 public class Balls {
-    public static final String WRONG_INPUT_MESSAGE = "3개의 볼이 필요합니다.";
-    public static final int SIZE = 3;
+    private static final String WRONG_INPUT_MESSAGE = "3개의 볼이 필요합니다.";
+    private static final int SIZE = 3;
     private final List<Ball> list;
 
     public Balls(List<Ball> balls) {
